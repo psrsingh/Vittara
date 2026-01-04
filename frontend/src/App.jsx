@@ -1,0 +1,41 @@
+import React from 'react'
+
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Orders from './pages/Orders';
+import Cart from './pages/Cart';  
+import Products from './pages/Products';
+import About from './pages/About';
+import Contacts from './pages/Contacts';
+import Collections from './pages/Collections';
+import Login from './pages/Login';
+import PlaceOrder from './pages/PlaceOrder';
+
+
+
+import { Routes,Route } from 'react-router-dom'
+
+
+const App = () => {
+  return (
+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+
+    <Navbar/>
+    <Routes>
+    <Route path='/orders' element={<Orders/>}/>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/cart' element={<Cart/>}/>
+    <Route path='/products/:productsId' element={<Products/>}/>
+    <Route path='/about' element={<About/>}/>
+    <Route path='/contacts' element={<Contacts/>}/>
+    <Route path='/collections' element={<Collections/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/placeOrder' element={<PlaceOrder/>}/>
+    
+    </Routes>
+      
+    </div>
+  )
+}
+
+export default App
