@@ -1,13 +1,13 @@
-import p_img1 from "./p_img1.jpg";
-import p_img2 from "./p_img2.jpg";
-import p_img10 from "./p_img10.jpg";
-import p_img3 from "./p_img3.jpg";  
-import p_img4 from "./p_img4.jpg";
-import p_img5 from "./p_img5.jpg";
-import p_img6 from "./p_img6.jpg";
-import p_img7 from "./p_img7.jpg";
-import p_img8 from "./p_img8.jpg";
-import p_img9 from "./p_img9.jpg";
+import p_img1 from "./p_img1.JPG";
+import p_img2 from "./p_img2.JPG";
+import p_img10 from "./p_img10.JPG";
+import p_img3 from "./p_img3.JPG";  
+import p_img4 from "./p_img4.JPG";
+import p_img5 from "./p_img5.JPG";
+import p_img6 from "./p_img6.JPG";
+import p_img7 from "./p_img7.JPG";
+import p_img8 from "./p_img8.JPG";
+import p_img9 from "./p_img9.JPG";
 
 
 export const products = [

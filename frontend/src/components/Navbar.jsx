@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className='flex items-center justify-between py-5 font-medium items-center py-4'>
 
-      <img src={vittaraLogo} alt="VITTARA" className='w-32 md:w-40'/>
+      <Link to={'/'}><img src={vittaraLogo} alt="VITTARA" className='w-32 md:w-40'/ ></Link>
 
 
 
