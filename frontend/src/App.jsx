@@ -10,6 +10,7 @@ import Contacts from './pages/Contacts';
 import Collections from './pages/Collections';
 import Login from './pages/Login';
 import PlaceOrder from './pages/PlaceOrder';
+import Footer from './components/Footer';
 
 
 
@@ -18,24 +19,30 @@ import { Routes,Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <div className="min-h-screen flex flex-col">
 
-    <Navbar/>
-    <Routes>
-    <Route path='/orders' element={<Orders/>}/>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/cart' element={<Cart/>}/>
-    <Route path='/products/:productsId' element={<Products/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/contacts' element={<Contacts/>}/>
-    <Route path='/collections' element={<Collections/>}/>
-    <Route path='/login' element={<Login/>}/>
-    <Route path='/placeOrder' element={<PlaceOrder/>}/>
-    
-    </Routes>
-      
+      <Navbar />
+
+      {/* Main content */}
+      <main className="flex-grow px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/products/:productsId" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/placeOrder" element={<PlaceOrder />} />
+        </Routes>
+      </main>
+
+      <Footer />
+
     </div>
-  )
-}
+  );
+};
+
 
 export default App

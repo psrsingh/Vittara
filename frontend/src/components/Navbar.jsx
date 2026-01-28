@@ -5,12 +5,13 @@ import profileIcon from "../assets/profile.png";
 import cartIcon from "../assets/cart.png";
 import menuIcon from "../assets/menu.png";
 import dropdownIcon from "../assets/dropdown.png";
-
 import vittaraLogo from '../assets/Vittara.png';
+
+
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   return (
-    <div className='flex items-center justify-between py-5 font-medium items-center py-4'>
+    <div className='flex items-center justify-between px-5 py-5 font-medium items-center py-4'>
 
       <Link to={'/'}><img src={vittaraLogo} alt="VITTARA" className='w-32 md:w-40'/ ></Link>
 

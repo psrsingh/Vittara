@@ -1,14 +1,13 @@
 import p_img1 from "./p_img1.JPG";
 import p_img2 from "./p_img2.JPG";
-import p_img10 from "./p_img10.JPG";
-import p_img3 from "./p_img3.JPG";  
+import p_img3 from "./p_img3.JPG";
 import p_img4 from "./p_img4.JPG";
 import p_img5 from "./p_img5.JPG";
 import p_img6 from "./p_img6.JPG";
 import p_img7 from "./p_img7.JPG";
 import p_img8 from "./p_img8.JPG";
 import p_img9 from "./p_img9.JPG";
-
+import p_img10 from "./p_img10.JPG";
 
 export const products = [
   {
@@ -20,7 +19,6 @@ export const products = [
     category: "Women",
     subCategory: "Topwear",
     sizes: ["S", "M", "L"],
-    date: 1716634345448,
     bestseller: true
   },
   {
@@ -32,7 +30,6 @@ export const products = [
     category: "Men",
     subCategory: "Topwear",
     sizes: ["M", "L", "XL"],
-    date: 1716635345448,
     bestseller: false
   },
   {
@@ -44,7 +41,6 @@ export const products = [
     category: "Women",
     subCategory: "Bottomwear",
     sizes: ["S", "M", "L", "XL"],
-    date: 1716636345448,
     bestseller: true
   },
   {
@@ -56,7 +52,6 @@ export const products = [
     category: "Men",
     subCategory: "Bottomwear",
     sizes: ["M", "L", "XL"],
-    date: 1716637345448,
     bestseller: false
   },
   {
@@ -68,7 +63,6 @@ export const products = [
     category: "Women",
     subCategory: "Ethnic Wear",
     sizes: ["S", "M", "L", "XL"],
-    date: 1716638345448,
     bestseller: true
   },
   {
@@ -80,7 +74,6 @@ export const products = [
     category: "Men",
     subCategory: "Shirts",
     sizes: ["M", "L", "XL"],
-    date: 1716639345448,
     bestseller: false
   },
   {
@@ -92,7 +85,6 @@ export const products = [
     category: "Women",
     subCategory: "Bottomwear",
     sizes: ["S", "M", "L"],
-    date: 1716640345448,
     bestseller: false
   },
   {
@@ -104,7 +96,6 @@ export const products = [
     category: "Men",
     subCategory: "Winterwear",
     sizes: ["M", "L", "XL"],
-    date: 1716641345448,
     bestseller: true
   },
   {
@@ -116,7 +107,6 @@ export const products = [
     category: "Women",
     subCategory: "Winterwear",
     sizes: ["S", "M", "L"],
-    date: 1716642345448,
     bestseller: false
   },
   {
@@ -128,8 +118,7 @@ export const products = [
     category: "Men",
     subCategory: "Bottomwear",
     sizes: ["M", "L", "XL"],
-    date: 1716643345448,
     bestseller: false
-  },
-  
+  }
 ];
+ 
