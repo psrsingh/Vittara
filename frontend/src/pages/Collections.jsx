@@ -3,8 +3,9 @@ import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title'
 import ProductItem from '../components/ProductItem'
 
+
 const Collections = () => {
-  const { products } = useContext(ShopContext)
+  const { products, showSearch, search} = useContext(ShopContext)
 
   const [showFilters, setShowFilters] = useState(false)
   const [filterProducts, setFilterProducts] = useState([])
@@ -33,8 +34,17 @@ const Collections = () => {
     )
   }
 
+  
+
   useEffect(() => {
     let updated = [...products]
+
+      if(showSearch && search){
+        updated = updated.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+      }
+
+
+
 
     if (category.length > 0) {
       updated = updated.filter(p => category.includes(p.category))
@@ -51,7 +61,7 @@ const Collections = () => {
     }
 
     setFilterProducts(updated)
-  }, [products, category, subCategory, sortOption])
+  }, [products, category, subCategory, sortOption , showSearch, search ])
 
   return (
     <div className='flex flex-col sm:flex-row gap-10 pt-10 border-t border-gray-200'>

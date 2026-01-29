@@ -8,6 +8,8 @@ import p_img7 from "./p_img7.JPG";
 import p_img8 from "./p_img8.JPG";
 import p_img9 from "./p_img9.JPG";
 import p_img10 from "./p_img10.JPG";
+import boots from "../assets/boots.png";
+
 
 export const products = [
   {
@@ -92,7 +94,7 @@ export const products = [
     name: "Men Hooded Sweatshirt",
     description: "Warm hoodie with adjustable drawstring.",
     price: 399,
-    image: [p_img8],
+    image: [p_img8,boots],
     category: "Men",
     subCategory: "Winterwear",
     sizes: ["M", "L", "XL"],
