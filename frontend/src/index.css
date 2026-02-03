@@ -19,3 +19,31 @@ a.active hr {
     background-color: black;  
     color: white;
    }}
+
+ .input {
+  @apply w-full rounded-2xl border border-gray-300 bg-white
+  px-4 py-3 text-[15px] text-gray-800
+  placeholder:text-gray-400
+  focus:outline-none
+  focus:border-black
+  focus:ring-2 focus:ring-black/10
+  transition duration-200;
+}
+
+/* PAYMENT BUTTONS */
+.payment-card {
+  @apply flex items-center justify-center h-14
+  rounded-xl border border-gray-300 bg-white
+  cursor-pointer
+  hover:border-black hover:shadow-sm
+  transition-all duration-200;
+}
+
+.payment-card.active {
+  @apply border-black ring-2 ring-black/10 shadow-sm;
+}
+
+/* PAYMENT TEXT (same size & alignment for all) */
+.payment-text {
+  @apply text-xs font-semibold tracking-wide text-center;
+}

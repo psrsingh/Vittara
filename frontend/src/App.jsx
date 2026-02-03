@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import PlaceOrder from './pages/PlaceOrder';
 import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
+import ScrollToTop from './components/ScrollToTop';
 
 import { Routes,Route } from 'react-router-dom'
 
@@ -19,12 +20,14 @@ import { Routes,Route } from 'react-router-dom'
 const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
 
       <Navbar />
       <SearchBar />
 
       {/* Main content */}
       <main className="flex-grow px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/orders" element={<Orders />} />

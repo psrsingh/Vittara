@@ -1,14 +1,19 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
+import RelatedProducts from "../components/RelatedProducts"; 
+
 
 const Products = () => {
   const { productsId } = useParams();
-  const { products } = useContext(ShopContext);
+  const { products, addToCart } = useContext(ShopContext);
 
   const [productData, setProductData] = useState(null);
   const [imgSrc, setImgSrc] = useState("");
   const [selectedSize, setSelectedSize] = useState(null);
+  const [activeTab, setActiveTab] = useState("description");
+  
+   
 
   useEffect(() => {
     if (products.length > 0) {
@@ -24,7 +29,7 @@ const Products = () => {
 
   if (!productData) return null;
 
-  return (
+  return  (
     <div className="border-t border-slate-100 pt-16">
       <div className="max-w-6xl mx-auto px-5 flex flex-col lg:flex-row gap-20">
         {/* Images */}
@@ -101,6 +106,7 @@ const Products = () => {
           {/* Actions */}
           <div className="flex gap-6 pt-6">
             <button
+              onClick={() => addToCart(productData.id, selectedSize) }
               disabled={!selectedSize}
               className="px-10 py-3 text-base border border-slate-200 text-slate-800
                hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed transition"
@@ -128,6 +134,54 @@ const Products = () => {
           </div>
         </div>
       </div>
+
+      {/* description */}
+                <div className="mt-20 max-w-3xl">
+      {/* Tabs */}
+      <div className="flex gap-6 border-b border-gray-200">
+        <button
+          onClick={() => setActiveTab("description")}
+          className={`pb-3 text-sm transition
+            ${activeTab === "description"
+              ? "text-gray-900 border-b-2 border-gray-900"
+              : "text-gray-400 hover:text-gray-600"
+            }`}
+        >
+          Description
+        </button>
+
+        <button
+          onClick={() => setActiveTab("reviews")}
+          className={`pb-3 text-sm transition
+            ${activeTab === "reviews"
+              ? "text-gray-900 border-b-2 border-gray-900"
+              : "text-gray-400 hover:text-gray-600"
+            }`}
+        >
+          Reviews (122)
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className="mt-6 text-sm text-gray-600 leading-relaxed">
+        {activeTab === "description" ? (
+          <p>
+            Crafted with premium materials for everyday comfort. Designed to be
+            lightweight, durable, and suitable for both casual and formal wear.
+          </p>
+        ) : (
+          <div className="space-y-2">
+            <p>⭐ 4.5 average rating</p>
+            <p>“Soft fabric and perfect fit.”</p>
+            <p>“Minimal design, feels premium.”</p>
+          </div>
+        )}
+      </div>
+    </div> 
+
+    {/* Display related products */}
+          <RelatedProducts category={productData.category} subCategory={productData.subCategory}/>
+
     </div>
   );
 };
